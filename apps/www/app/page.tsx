@@ -1,102 +1,204 @@
-import Image, { type ImageProps } from "next/image";
-import { Button } from "@repo/ui/button";
-import styles from "./page.module.css";
+import styles from "./page.module.css"
 
-type Props = Omit<ImageProps, "src"> & {
-  srcLight: string;
-  srcDark: string;
-};
-
-const ThemeImage = (props: Props) => {
-  const { srcLight, srcDark, ...rest } = props;
-
-  return (
-    <>
-      <Image {...rest} src={srcLight} className="imgLight" />
-      <Image {...rest} src={srcDark} className="imgDark" />
-    </>
-  );
-};
+const links = {
+  chrome: "https://example.com/chrome",
+  github: "https://github.com/ameyalambat128/api-hover",
+  twitter: "https://x.com/placeholder",
+  email: "mailto:hello@example.com"
+}
 
 export default function Home() {
   return (
     <div className={styles.page}>
-      <main className={styles.main}>
-        <ThemeImage
-          className={styles.logo}
-          srcLight="turborepo-dark.svg"
-          srcDark="turborepo-light.svg"
-          alt="Turborepo logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
-          <li>
-            Get started by editing <code>apps/www/app/page.tsx</code>
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+      <div className={styles.noise} aria-hidden="true" />
 
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new/clone?demo-description=Learn+to+implement+a+monorepo+with+a+two+Next.js+sites+that+has+installed+three+local+packages.&demo-image=%2F%2Fimages.ctfassets.net%2Fe5382hct74si%2F4K8ZISWAzJ8X1504ca0zmC%2F0b21a1c6246add355e55816278ef54bc%2FBasic.png&demo-title=Monorepo+with+Turborepo&demo-url=https%3A%2F%2Fexamples-basic-web.vercel.sh%2F&from=templates&project-name=Monorepo+with+Turborepo&repository-name=monorepo-turborepo&repository-url=https%3A%2F%2Fgithub.com%2Fvercel%2Fturborepo%2Ftree%2Fmain%2Fexamples%2Fbasic&root-directory=apps%2Fdocs&skippable-integrations=1&teamSlug=vercel&utm_source=create-turbo"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            href="https://turborepo.dev/docs?utm_source"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
+      <header className={styles.nav}>
+        <div className={styles.wordmark}>API Hover</div>
+        <div className={styles.navLinks}>
+          <a href="#features">Features</a>
+          <a href="#flow">Flow</a>
+          <a href="#demo">Demo</a>
         </div>
-        <Button appName="web" className={styles.secondary}>
-          Open alert
-        </Button>
+        <a className={styles.navCta} href={links.chrome}>
+          Get the extension
+        </a>
+      </header>
+
+      <main className={styles.main}>
+        <section className={styles.hero}>
+          <div className={styles.heroCopy}>
+            <span className={styles.pill}>Private beta</span>
+            <h1>See the API calls behind every click.</h1>
+            <p>
+              API Hover links UI interactions to network calls in real time.
+              Hover any element and get a precise, contextual trace of what fired,
+              when, and how long it took.
+            </p>
+            <div className={styles.ctaRow}>
+              <a className={styles.primaryCta} href={links.chrome}>
+                Get the extension
+              </a>
+              <a className={styles.secondaryCta} href={links.github}>
+                View on GitHub
+              </a>
+            </div>
+            <div className={styles.heroMeta}>
+              <div>
+                <span>Capture</span>
+                <strong>fetch + XHR</strong>
+              </div>
+              <div>
+                <span>Correlate</span>
+                <strong>click, submit, enter</strong>
+              </div>
+              <div>
+                <span>Persist</span>
+                <strong>session-only</strong>
+              </div>
+            </div>
+          </div>
+          <div className={styles.heroVisual}>
+            <div className={styles.visualFrame}>
+              <div className={styles.visualHeader}>
+                <span>API Hover</span>
+                <span className={styles.visualStatus}>live</span>
+              </div>
+              <div className={styles.visualTarget}>
+                <div className={styles.targetLabel}>Hovered element</div>
+                <div className={styles.targetTitle}>"Issues" tab</div>
+                <div className={styles.targetMeta}>aria-label=Issues</div>
+              </div>
+              <div className={styles.visualRequests}>
+                <div className={styles.requestRow}>
+                  <span className={styles.method}>GET</span>
+                  <span className={styles.url}>/repos/.../issues</span>
+                  <span className={styles.status}>200 · 214ms</span>
+                </div>
+                <div className={styles.requestRow}>
+                  <span className={styles.method}>POST</span>
+                  <span className={styles.url}>/graphql</span>
+                  <span className={styles.status}>200 · 96ms</span>
+                </div>
+                <div className={styles.requestRow}>
+                  <span className={styles.method}>GET</span>
+                  <span className={styles.url}>/notifications</span>
+                  <span className={styles.status}>304 · 41ms</span>
+                </div>
+              </div>
+            </div>
+            <div className={styles.glow} aria-hidden="true" />
+          </div>
+        </section>
+
+        <section id="features" className={styles.features}>
+          <div className={styles.sectionHeader}>
+            <span>Features</span>
+            <h2>Stay in the flow while the network explains itself.</h2>
+          </div>
+          <div className={styles.featureGrid}>
+            <div className={styles.featureCard}>
+              <h3>Hover-first visibility</h3>
+              <p>
+                Tooltips surface the last calls tied to the element you care
+                about. No panels. No hunting.
+              </p>
+            </div>
+            <div className={styles.featureCard}>
+              <h3>Interaction correlation</h3>
+              <p>
+                Clicks, submits, and Enter key actions are matched to requests
+                within a tight window for accurate context.
+              </p>
+            </div>
+            <div className={styles.featureCard}>
+              <h3>Session-only memory</h3>
+              <p>
+                Everything stays in session. Refresh when you want a clean slate.
+                No persistence.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section id="flow" className={styles.flow}>
+          <div className={styles.sectionHeader}>
+            <span>How it works</span>
+            <h2>Interact. Capture. Hover.</h2>
+          </div>
+          <div className={styles.flowSteps}>
+            <div>
+              <div className={styles.stepIndex}>01</div>
+              <h3>Interact</h3>
+              <p>Click, submit, or press Enter to mark intent.</p>
+            </div>
+            <div>
+              <div className={styles.stepIndex}>02</div>
+              <h3>Capture</h3>
+              <p>Fetch/XHR wrappers emit request events in real time.</p>
+            </div>
+            <div>
+              <div className={styles.stepIndex}>03</div>
+              <h3>Hover</h3>
+              <p>See the linked calls instantly in a minimal tooltip.</p>
+            </div>
+          </div>
+        </section>
+
+        <section id="demo" className={styles.demo}>
+          <div className={styles.sectionHeader}>
+            <span>Example</span>
+            <h2>Minimal UI. Maximum signal.</h2>
+          </div>
+          <div className={styles.demoGrid}>
+            <div className={styles.demoCopy}>
+              <p>
+                API Hover is designed for fast context. It stays out of the way
+                until you need it, then appears precisely where you look.
+              </p>
+              <div className={styles.demoList}>
+                <div>
+                  <span>Inspect mode</span>
+                  <strong>Toggle per tab</strong>
+                </div>
+                <div>
+                  <span>Link window</span>
+                  <strong>Adjustable in popup</strong>
+                </div>
+                <div>
+                  <span>History</span>
+                  <strong>Clear in one click</strong>
+                </div>
+              </div>
+            </div>
+            <div className={styles.demoPanel}>
+              <div className={styles.demoHeader}>Hovered element</div>
+              <div className={styles.demoMeta}>button · data-testid=save</div>
+              <div className={styles.demoRows}>
+                <div>
+                  <span>POST</span>
+                  <span>/api/save</span>
+                  <span>201 · 132ms</span>
+                </div>
+                <div>
+                  <span>GET</span>
+                  <span>/api/changes</span>
+                  <span>200 · 42ms</span>
+                </div>
+              </div>
+              <div className={styles.demoEmpty}>No recorded calls yet.</div>
+            </div>
+          </div>
+        </section>
       </main>
+
       <footer className={styles.footer}>
-        <a
-          href="https://vercel.com/templates?search=turborepo&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://turborepo.dev?utm_source=create-turbo"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to turborepo.dev →
-        </a>
+        <div>API Hover</div>
+        <div className={styles.footerLinks}>
+          <a href={links.github}>GitHub</a>
+          <a href={links.twitter}>X / Twitter</a>
+          <a href={links.email}>Email</a>
+        </div>
       </footer>
     </div>
-  );
+  )
 }
