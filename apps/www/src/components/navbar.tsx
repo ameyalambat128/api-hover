@@ -33,7 +33,7 @@ export default function Navbar() {
       <section className="flex items-center space-x-2 lg:space-x-6">
         <div className="flex items-center space-x-2 lg:space-x-4">
           <a
-            href="https://x.com/darkdocs2"
+            href="https://x.com/lambatameya"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="X (Twitter)"
@@ -47,7 +47,7 @@ export default function Navbar() {
             />
           </a>
           <a
-            href="https://github.com/ameyalambat128/dark-docs-2.0"
+            href="https://github.com/ameyalambat128/api-hover"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="GitHub"
@@ -61,51 +61,6 @@ export default function Navbar() {
             />
           </a>
         </div>
-        {/* Product Hunt Badge - Large */}
-        <a
-          href="https://www.producthunt.com/products/docs-dark-2-0?embed=true&utm_source=badge-featured&utm_medium=badge&utm_source=badge-dark&#0045;docs&#0045;2&#0045;0"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="hidden lg:block"
-        >
-          <Image
-            src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1002154&theme=light&t=1754457725109"
-            alt="Dark Docs 2.0 - The Dark Theme Google 'Forgot' | Product Hunt"
-            width={160}
-            height={34}
-            style={{ width: "160px", height: "34px" }}
-          />
-        </a>
-        {/* Product Hunt Badge - Small */}
-        <a
-          href="https://www.producthunt.com/products/docs-dark-2-0?embed=true&utm_source=badge-featured&utm_medium=badge&utm_source=badge-dark&#0045;docs&#0045;2&#0045;0"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="hidden sm:block lg:hidden"
-        >
-          <Image
-            src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1002154&theme=light&t=1754457725109"
-            alt="Dark Docs 2.0 - The Dark Theme Google 'Forgot' | Product Hunt"
-            width={100}
-            height={22}
-            style={{ width: "100px", height: "22px" }}
-          />
-        </a>
-        {/* Product Hunt Badge - Mobile */}
-        <a
-          href="https://www.producthunt.com/products/docs-dark-2-0?embed=true&utm_source=badge-featured&utm_medium=badge&utm_source=badge-dark&#0045;docs&#0045;2&#0045;0"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="block sm:hidden"
-        >
-          <Image
-            src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1002154&theme=light&t=1754457725109"
-            alt="Dark Docs 2.0 - The Dark Theme Google 'Forgot' | Product Hunt"
-            width={120}
-            height={26}
-            style={{ width: "120px", height: "26px" }}
-          />
-        </a>
       </section>
     </nav>
   );
