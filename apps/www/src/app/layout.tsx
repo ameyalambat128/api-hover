@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "API Hover — See API calls tied to UI interactions",
+    default: "API Hover - See API calls tied to UI interactions",
     template: "%s | API Hover",
   },
   description:
