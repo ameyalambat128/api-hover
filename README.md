@@ -1,6 +1,6 @@
 # API Hover
 
-API Hover — See API calls tied to UI interactions.
+API Hover: See API calls tied to UI interactions.
 
 ## What it does
 - Hover elements to see linked API calls
