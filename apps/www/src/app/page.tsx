@@ -6,6 +6,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import Footer from "@/components/footer";
 import AddToBrowserButton from "@/components/add-to-browser-button";
+import { MousePointerClick } from "lucide-react";
 
 export default function Home() {
   return (
@@ -27,12 +28,28 @@ export default function Home() {
               className="mb-8 overflow-visible lg:mb-12"
             >
               <h1
-                className="mb-6 bg-gradient-to-b from-white via-white to-neutral-400 bg-clip-text pb-3 text-center text-4xl font-bold leading-normal tracking-tight text-transparent md:text-6xl lg:text-7xl"
+                className="mb-6 bg-gradient-to-b from-white via-white to-neutral-400 bg-clip-text pb-3 text-center text-3xl font-bold leading-tight tracking-tight text-transparent md:text-5xl lg:text-6xl"
                 style={{
                   textShadow: "0 1px 2px rgba(0,0,0,0.2)",
                 }}
               >
-                API Hover
+                <span className="block">
+                  <span className="inline-flex items-baseline gap-3">
+                    <span>Stop guessing which</span>
+                    <span className="inline-block -translate-y-[0.02em] align-baseline font-mono text-[0.92em] font-semibold tracking-tight text-zinc-300">
+                      /endpoint
+                    </span>
+                  </span>
+                </span>
+                <span className="mt-1 block">
+                  that{" "}
+                  <MousePointerClick
+                    aria-hidden="true"
+                    strokeWidth={1.8}
+                    className="mx-1 inline-block h-[0.62em] w-[0.62em] align-[-0.06em] text-zinc-300/80"
+                  />
+                  click hit.
+                </span>
               </h1>
 
               <p className="mx-auto max-w-2xl text-lg leading-relaxed text-gray-400 md:text-xl">
