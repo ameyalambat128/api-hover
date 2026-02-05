@@ -5,16 +5,20 @@ export default function Footer() {
     <section className="absolute bottom-0 text-gray-400 dark:text-gray-600">
       <div className="h-[1px] w-screen bg-gray-400 dark:bg-gray-600" />
       <div className="mx-3 flex max-w-4xl justify-between py-2 text-xs md:mx-auto md:text-sm">
-        <p>
+        <div className="flex items-center gap-4">
           <Link
-            href="https://chromewebstore.google.com/detail/docs-dark-20/djmmkojigpkdagglmjjdjiddopgdchcn?authuser=0&hl=en"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="/"
             className="tracking-tight underline transition-colors hover:text-gray-100"
           >
-            Dark Docs 2.0
+            API Hover
           </Link>
-        </p>
+          <Link
+            href="/privacy"
+            className="tracking-tight underline transition-colors hover:text-gray-100"
+          >
+            Privacy
+          </Link>
+        </div>
 
         <div className="flex items-center gap-1">
           <a
