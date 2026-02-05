@@ -7,7 +7,7 @@ const browsers = [
   {
     name: "Chrome",
     icon: "/browser-icons/chrome.svg",
-    link: "https://chromewebstore.google.com/detail/docs-dark-20/djmmkojigpkdagglmjjdjiddopgdchcn?authuser=0&hl=en",
+    link: "https://chromewebstore.google.com/detail/api-hover/apdannkfhlmlbbckecgbdaoljbblmbgo",
     match: /Chrome/i,
   },
   {
@@ -19,13 +19,13 @@ const browsers = [
   {
     name: "Edge",
     icon: "/browser-icons/edge.svg",
-    link: "https://chromewebstore.google.com/detail/docs-dark-20/djmmkojigpkdagglmjjdjiddopgdchcn?authuser=0&hl=en",
+    link: "https://chromewebstore.google.com/detail/api-hover/apdannkfhlmlbbckecgbdaoljbblmbgo",
     match: /Edg/i,
   },
   {
     name: "Opera",
     icon: "/browser-icons/opera.svg",
-    link: "https://chromewebstore.google.com/detail/docs-dark-20/djmmkojigpkdagglmjjdjiddopgdchcn?authuser=0&hl=en",
+    link: "https://chromewebstore.google.com/detail/api-hover/apdannkfhlmlbbckecgbdaoljbblmbgo",
     match: /Opera|OPR/i,
   },
 ];
