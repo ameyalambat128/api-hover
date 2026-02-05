@@ -13,7 +13,9 @@
       "outputs": [
         "dist/**",
         "build/**",
-        ".plasmo/**"
+        ".plasmo/**",
+        ".next/**",
+        "!.next/cache/**"
       ]
     },
     "lint": {
