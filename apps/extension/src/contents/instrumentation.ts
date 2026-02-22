@@ -1,5 +1,5 @@
-import type { PlasmoCSConfig } from "plasmo"
 import type { NetworkRequest } from "@api-hover/core"
+import type { PlasmoCSConfig } from "plasmo"
 
 const SOURCE_TAG = "api-hover"
 const GLOBAL_GUARD = "__API_HOVER_INSTRUMENTED__"
@@ -106,7 +106,14 @@ const wrapXHR = () => {
     ) {
       method = (openMethod || "GET").toUpperCase()
       url = openUrl
-      return originalOpen.call(this, openMethod, openUrl, async ?? true, username ?? null, password ?? null)
+      return originalOpen.call(
+        this,
+        openMethod,
+        openUrl,
+        async ?? true,
+        username ?? null,
+        password ?? null
+      )
     }
 
     const originalSend = xhr.send
@@ -133,7 +140,6 @@ const wrapXHR = () => {
 
     return xhr
   }
-
 
   Object.assign(WrappedXHR, OriginalXHR)
   WrappedXHR.prototype = OriginalXHR.prototype
