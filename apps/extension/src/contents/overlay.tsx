@@ -17,6 +17,7 @@ const MAX_INTERACTIONS = 200
 const MAX_REQUESTS = 200
 const DOCK_MARGIN = 8
 const DEFAULT_DOCK_WIDTH = 320
+const DEFAULT_DOCK_HEIGHT = 460
 const MIN_DOCK_WIDTH = 300
 const MIN_DOCK_HEIGHT = 260
 const INTERACTIVE_SELECTOR =
@@ -111,6 +112,7 @@ export const getStyle: PlasmoGetStyle = () => {
     .api-hover-dock-panel {
       position: absolute;
       width: ${DEFAULT_DOCK_WIDTH}px;
+      height: ${DEFAULT_DOCK_HEIGHT}px;
       border-radius: 14px;
       border: 1px solid rgba(148, 163, 184, 0.2);
       background: rgba(5, 8, 16, 0.95);
