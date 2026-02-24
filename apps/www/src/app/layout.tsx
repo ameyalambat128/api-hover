@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import { Geist, Geist_Mono } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
+import { SITE_URL } from "@/lib/site-url";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -47,25 +48,16 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL("https://darkdocs.ameyalambat.com"),
+  metadataBase: new URL(SITE_URL),
   alternates: {
-    canonical: "https://darkdocs.ameyalambat.com",
+    canonical: "/",
   },
   openGraph: {
     title: "Dark Docs 2.0 - The Dark Theme Google Forgot",
     description:
       "Transform your Google Docs with a beautiful dark theme that reduces eye strain. Free extension with 4.8★ rating from 1000+ users. Available for all major browsers.",
-    url: "https://darkdocs.ameyalambat.com",
+    url: "/",
     siteName: "Dark Docs 2.0",
-    images: [
-      {
-        url: "https://darkdocs.ameyalambat.com/og.png?v=2",
-        width: 1200,
-        height: 630,
-        alt: "Dark Docs 2.0 extension preview showing Google Docs in dark mode",
-        type: "image/png",
-      },
-    ],
     locale: "en_US",
     type: "website",
   },
@@ -76,7 +68,6 @@ export const metadata: Metadata = {
     title: "Dark Docs 2.0 - The Dark Theme Google Forgot",
     description:
       "Transform Google Docs with a beautiful dark theme. Free extension with 4.8★ rating. Reduces eye strain & enhances productivity. Available for all browsers.",
-    images: ["https://darkdocs.ameyalambat.com/og.png?v=2"],
   },
   robots: {
     index: true,
@@ -108,7 +99,7 @@ const jsonLd = {
   name: "Dark Docs 2.0",
   description:
     "Transform your Google Docs experience with Dark Docs 2.0 - the beautiful dark theme extension that reduces eye strain and enhances productivity.",
-  url: "https://darkdocs.ameyalambat.com",
+  url: SITE_URL,
   applicationCategory: "BrowserExtension",
   operatingSystem: "Chrome, Firefox, Edge, Opera",
   offers: {
@@ -132,13 +123,13 @@ const jsonLd = {
   publisher: {
     "@type": "Organization",
     name: "Dark Docs",
-    url: "https://darkdocs.ameyalambat.com",
+    url: SITE_URL,
   },
   datePublished: "2024-01-01",
   dateModified: new Date().toISOString().split("T")[0],
   keywords:
     "Google Docs dark theme, dark mode extension, productivity tools, eye strain reduction",
-  screenshot: "https://darkdocs.ameyalambat.com/hero-alt.png",
+  screenshot: `${SITE_URL}/hero-alt.png`,
   downloadUrl:
     "https://chromewebstore.google.com/detail/docs-dark-20/djmmkojigpkdagglmjjdjiddopgdchcn",
 };
