@@ -1,7 +1,7 @@
 {
   "name": "@api-hover/extension",
   "displayName": "API Hover",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Hover to see API calls tied to your interactions.",
   "author": "API Hover",
   "scripts": {
